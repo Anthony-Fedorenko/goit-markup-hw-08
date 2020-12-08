@@ -443,7 +443,7 @@ img {
     height: 90px;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--clients-section-color);
+    border: 1px solid var(--icons-color);
     border-radius: 4px;
 }
 
@@ -468,8 +468,8 @@ img {
 }
 
 .clients-icon-1 {
-    width: 44,27px;
-    height: 49,23px;
+    width: 44.27px;
+    height: 49.23px;
     fill: var(--icons-color);
 }
 
@@ -481,13 +481,13 @@ img {
 
 .clients-icon-3 {
     width: 41px;
-    height: 42,6px;
+    height: 42.6px;
     fill: var(--icons-color);
 }
 
 .clients-icon-4 {
-    width: 79,66px;
-    height: 42,02px;
+    width: 79.66px;
+    height: 42.02px;
     fill: var(--icons-color);
 }
 
@@ -498,8 +498,8 @@ img {
 }
 
 .clients-icon-6 {
-    width: 88,48px;
-    height: 45,44px;
+    width: 88.48px;
+    height: 45.44px;
     fill: var(--icons-color);
 }
 
