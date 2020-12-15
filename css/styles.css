@@ -773,6 +773,38 @@ img {
     letter-spacing: 0.03em;
 }
 
+.imageblock {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 294px;
+    background-color: var(--hover-overlay);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 63px 24px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms var(--timing-func), opacity 250ms var(--timing-func);
+}
+
+.projects:hover .card-info,
+.projects:focus .card-info {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.info-text {
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--primary-white-color);
+}
+
 /*modal*/
 .backdrop {
     position: fixed;
