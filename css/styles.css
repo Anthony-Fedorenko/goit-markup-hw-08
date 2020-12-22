@@ -18,6 +18,10 @@
 
 /* overlay bg color*/
 
+/* modalform input border rgba(33,33,33,0.2) */
+
+/* textarea text color*/
+
 html {
     box-sizing: border-box;
 }
@@ -39,6 +43,9 @@ html {
     --hover-overlay: rgba(33, 150, 243, 0.9);
     --timing-func: cubic-bezier(0.4, 0, 0.2, 1);
     --overlay-bg-color: rgba(47, 48, 58, 0.8);
+    --modalinput-border-color: rgba(33, 33, 33, 0.2); 
+    --textarea-text-color: rgba(117,117,117,0.5);
+
 }
 
 
@@ -257,7 +264,7 @@ img {
 /* Button */
 
 .hero-button {
-    display: inline-block;
+    display: inline-flex;
     border-radius: 4px;
     min-width: 200px;
     height: 50px;
@@ -274,6 +281,12 @@ img {
     border: none;
     outline: none;
     transition: background-color 250ms var(--timing-func), color 250ms var(--timing-func);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
 }
 
 
@@ -329,7 +342,7 @@ img {
 }
 
 .image-overlay {
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -355,6 +368,7 @@ img {
 .job-item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
+    position: relative;
 }
 
 .job-item:nth-child(3n) {
@@ -625,7 +639,52 @@ img {
     margin-right: 70px;
   }
 
+.footer-input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: var(--secondary-bg-color);
+    display: inline-flex;
+    margin-right: 10px;
+}
+.footer-form .hero-button {
+    width: 200px;
+    height: 50px;
+    padding: 10px 29px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 1.87;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-align: left;
+    border: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.hero-button.submit:hover .iconsend,
+.hero-button.submit:focus .iconsend {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}
+
+.iconsend {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-white-color);
+}
+
+.iconsend:hover,
+.iconsend:focus {
+    fill: var(--accent-color);
+}
 
 .join {
   font-weight: 700;
@@ -813,6 +872,8 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-func);
 }
 
 .backdrop.is-hidden {
@@ -825,10 +886,180 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: 581px;
-    min-width: 528px;
-    background-color: #FFFFFF;
+    width: 528px;
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-func);
+}
+.modal-form {
+    width: 100%;
+}
+
+.modalform-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.modalform-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.input-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea-field {
+    margin-bottom: 20px;
+}
+
+.label {
+    margin-bottom: 4px;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color);
+}
+
+.input {
+    margin: 0;
+    padding: 11px 12px;
+    height: 40px;
+    border: 1px solid var(--modalinput-border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    padding-left: 42px;
+    outline: none;
+}
+
+.input:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.modalform-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: var(--primary-text-color);
+    width: 18px;
+    height: 18px;
+}
+
+.input:focus ~ .modalform-icon {
+    fill: var(--accent-color);
+}
+
+.textarea {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid var(--modalinput-border-color);
+    border-radius: 4px;
+    outline: none;
+}
+
+.textarea:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.textarea::placeholder {
+    font-size: 14px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--textarea-text-color);
+}
+
+.checkbox-field {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+  
+.label-rules {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.label-rules a {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+
+.label-rules a:visited {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox-icon {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+}
+
+.checkbox:checked + .checkbox-icon {
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    background-image: url('../images/icons/chekbox.svg');
+    background-origin: border-box;
+}
+
+.button-submit {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    padding: 10px 55px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 1.87;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+    transition: background-color 250ms var(--timing-func);
+}
+
+.button-submit:hover {
+    color: var(--primary-white-color);
+    background-color: #188ce8;
 }
 
 
@@ -843,7 +1074,8 @@ img {
     background-color: var(--primary-white-color);
     cursor: pointer;
 }
-  .icon-close {
+
+.icon-close {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -852,4 +1084,8 @@ img {
     height: 18px;
     fill: #000000;
     transition: fill 250ms var(--timing-func);
+}
+
+.button-close:hover .icon-close {
+    fill: var(--accent-color);
 }
