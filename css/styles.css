@@ -912,8 +912,6 @@ img {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 .input-icon {
