@@ -645,19 +645,23 @@ img {
     padding: 15px 16px;
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.25;
     letter-spacing: 0.03em;
-    color: var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color);
     display: inline-flex;
     margin-right: 10px;
 }
-.footer-form .hero-button {
+.hero-button-subscribe {
     width: 200px;
     height: 50px;
     padding: 10px 29px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
     font-size: 16px;
     line-height: 1.87;
     font-weight: 700;
@@ -669,22 +673,28 @@ img {
     align-items: center;
 }
 
-.hero-button.submit:hover .iconsend,
+.hero-button-subscribe:hover {
+    color: var(--primary-white-color);
+    background-color: #188ce8;
+}
+
+/*.hero-button.submit:hover .iconsend,
 .hero-button.submit:focus .iconsend {
   background-color: var(--bg-color);
   color: var(--accent-color);
-}
+}*/
 
 .iconsend {
     width: 24px;
     height: 24px;
     fill: var(--primary-white-color);
+
 }
 
-.iconsend:hover,
+/*.iconsend:hover,
 .iconsend:focus {
     fill: var(--accent-color);
-}
+}*/
 
 .join {
   font-weight: 700;
@@ -890,7 +900,7 @@ img {
     background-color: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 40px;
+    padding: 40px 39px 40px 41px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-func);
 }
@@ -904,7 +914,6 @@ img {
     line-height: 1.15;
     text-align: center;
     color: var(--primary-text-color);
-    margin-top: 40px;
     margin-bottom: 12px;
 }
 
@@ -928,6 +937,7 @@ img {
     margin-bottom: 4px;
     font-family: Roboto;
     font-size: 12px;
+    font-weight: 400;
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--secondary-text-color);
@@ -967,6 +977,7 @@ img {
 .textarea {
     resize: none;
     height: 120px;
+    font-weight: 400;
     padding: 12px 16px;
     border: 1px solid var(--modalinput-border-color);
     border-radius: 4px;
@@ -978,7 +989,9 @@ img {
 }
 
 .textarea::placeholder {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--textarea-text-color);
