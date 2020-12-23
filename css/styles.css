@@ -970,6 +970,21 @@ img {
     height: 18px;
 }
 
+.person-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.phone-icon {
+    width: 13px;
+    height: 13px;
+}
+
+.email-icon {
+    width: 15px;
+    height: 12px;
+}
+
 .input:focus ~ .modalform-icon {
     fill: var(--accent-color);
 }
