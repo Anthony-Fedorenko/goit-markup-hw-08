@@ -354,8 +354,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/herobgn.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/herobgn.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/herobgn.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/herobgn.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -412,6 +412,13 @@ img {
   margin-left: 30px;
 }
 
+.features-list .discription {
+  color: #757575;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
 .iconblock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,13 +445,6 @@ img {
   margin-bottom: 10px;
   font-size: 14px;
   text-transform: uppercase;
-}
-
-.features-list .discription {
-  color: #757575;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
 }
 
 .image-overlay {
@@ -692,14 +692,8 @@ img {
   margin-bottom: 94px;
 }
 
-.filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+.portfolio-page .filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button {
@@ -717,14 +711,14 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   padding: 6px 22px;
+  cursor: pointer;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter-button:hover, .filter-button:focus {
   color: #FFFFFF;
   background-color: #2196F3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -742,10 +736,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.filter .filter-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .card-list {
@@ -1268,7 +1258,7 @@ img {
 .checkbox:checked + .checkbox-icon {
   background-color: #2196F3;
   border: 2px solid #2196F3;
-  background-image: url("../../images/icons/chekbox.svg");
+  background-image: url("/images/icons/chekbox.svg");
   background-origin: border-box;
 }
 
