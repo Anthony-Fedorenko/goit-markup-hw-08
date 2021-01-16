@@ -1,0 +1,68 @@
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients-link {
+    display: flex;
+    width: 170px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $icons-color;
+    border-radius: 4px;
+    transition: border-color 250ms $timing-func;
+    &:hover,
+    &:focus {
+    border: 1px solid $accent-color
+    }
+}
+
+.clients-link {
+    &:hover .icon-client,
+    &:focus .icon-client {
+    fill: $accent-color;
+    }
+}
+
+.icon-client {
+    fill: currentColor;
+    transition: fill 250ms $timing-func;
+}
+.clients-icon {
+    &-1 {
+    width: 44.27px;
+    height: 49.23px;
+    fill: $icons-color;
+    }
+
+    &-2 {
+    width: 40px;
+    height: 52px;
+    fill: $icons-color;
+    }
+
+    &-3 {
+    width: 41px;
+    height: 42.6px;
+    fill: $icons-color;
+    }
+
+    &-4 {
+    width: 79.66px;
+    height: 42.02px;
+    fill: $icons-color;
+    }
+
+    &-5 {
+    width: 59px;
+    height: 47px;
+    fill: $icons-color;
+    }
+
+    &-6 {
+    width: 88.48px;
+    height: 45.44px;
+    fill: $icons-color;
+    }
+}

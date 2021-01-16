@@ -1,0 +1,110 @@
+.header {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    border: 1px solid $header-border-color;
+    .container {
+      display: flex;
+      align-items: center;
+    }
+}
+
+.nav {
+    display: flex;
+}
+
+.main-logo {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+    .item + .item {
+      margin-left: 50px;
+    }
+}
+
+.site-nav .link {
+    position: relative;
+    color: $primary-text-color;
+    text-decoration: none;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-transform: capitalize;
+    transition: color 250ms $timing-func;
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+}
+
+.site-nav .link.current{
+    color: $accent-color;
+}
+
+.site-nav .link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+}
+
+.site-nav .link.current::after {
+    display: block;
+  }
+
+.adr-nav {
+    display: flex;
+    margin-left: auto;
+    .item + .item {
+      margin-left: 50px;
+    }
+}
+
+.adr-nav .link {
+    display: inline-flex;
+    text-align: center;
+    color: $secondary-text-color;
+    text-decoration: none;
+    font-style: normal;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms $timing-func;
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+}
+
+.link-envelope:hover .icon-envelope,
+.link-envelope:focus .icon-envelope,
+.link-smartphone:hover .icon-smartphone,
+.linl-smartphone:focus .icon-smartphone {
+    fill: $accent-color;
+}
+
+.icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: $secondary-text-color;
+}
+
+.icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: $secondary-text-color;
+}
+
