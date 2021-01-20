@@ -1,3 +1,35 @@
+.logo {
+    &--centered {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &-link {
+        color: $primary-text-color;
+        font-family: Raleway, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 26px;
+        line-height: 1.19;
+        text-decoration: none;
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @media screen and (min-width: 768px) {
+            padding-top: 24px;
+            padding-bottom: 24px
+        }
+        span {
+            color: $accent-color;
+        }
+        &--inverse {
+            color: $primary-white-color;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    }
+}
+
 .accent {
     font-family: Raleway, sans-serif;
     color: $accent-color;
@@ -8,11 +40,8 @@
 }
 
 .header-logo {
-    font-family: Raleway, sans-serif;
+
     color: $primary-text-color;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 26px;
-    line-height: 1.19;
-    
+
+
 }

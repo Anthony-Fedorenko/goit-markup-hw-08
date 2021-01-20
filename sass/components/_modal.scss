@@ -7,6 +7,8 @@
     background-color: $backdrop-bg-color;
     opacity: 1;
     transition: opacity 250ms $timing-func;
+    padding: 93px 15px;
+    overflow-y: scroll;
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
@@ -19,220 +21,229 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 528px;
     background-color: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 40px 39px 40px 41px;
+    padding: 40px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms $timing-func;
-}
-.modal-form {
-    width: 100%;
-}
 
-.modalform-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    color: $primary-text-color;
-    margin-bottom: 12px;
-}
+    @media screen and (min-width: 480px) {
+        max-width: 450px;
+        width: 100%;
+    }
 
-.modalform-field {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.input-icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.textarea-field {
-    margin-bottom: 20px;
-}
-
-.label {
-    margin-bottom: 4px;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: $secondary-text-color;
-}
-
-.input {
-    margin: 0;
-    padding: 11px 12px;
-    height: 40px;
-    border: 1px solid $modalinput-border-color;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    padding-left: 42px;
-    outline: none;
-}
-
-.input {
-    &:focus {
-    border: 1px solid $accent-color;
+    @media screen and (min-width: 1170px) {
+        max-width: 528px;
+        width: 100%;
     }
 }
+// .modal-form {
+//     width: 100%;
+// }
 
-.modalform-icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    fill: $primary-text-color;
-    width: 18px;
-    height: 18px;
-}
+// .modalform-title {
+//     font-weight: 700;
+//     font-size: 20px;
+//     line-height: 1.15;
+//     text-align: center;
+//     color: $primary-text-color;
+//     margin-bottom: 12px;
+// }
 
-.input:focus ~ .modalform-icon {
-    fill: $accent-color;
-}
+// .modalform-field {
+//     margin-bottom: 10px;
+//     display: flex;
+//     flex-direction: column;
+// }
 
+// .input-icon {
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+// }
 
-.person-icon {
-    width: 12px;
-    height: 12px;
-}
+// .textarea-field {
+//     margin-bottom: 20px;
+// }
 
-.phone-icon {
-    width: 13px;
-    height: 13px;
-}
+// .label {
+//     margin-bottom: 4px;
+//     font-family: Roboto;
+//     font-size: 12px;
+//     font-weight: 400;
+//     line-height: 1.16;
+//     letter-spacing: 0.01em;
+//     color: $secondary-text-color;
+// }
 
-.email-icon {
-    width: 15px;
-    height: 12px;
-}
+// .input {
+//     margin: 0;
+//     padding: 11px 12px;
+//     height: 40px;
+//     border: 1px solid $modalinput-border-color;
+//     border-radius: 4px;
+//     font-size: 14px;
+//     line-height: 1.16;
+//     letter-spacing: 0.01em;
+//     padding-left: 42px;
+//     outline: none;
+// }
 
-.input:focus ~ .modalform-icon {
-    fill: $accent-color;
-}
+// .input {
+//     &:focus {
+//     border: 1px solid $accent-color;
+//     }
+// }
 
-.textarea {
-    resize: none;
-    height: 120px;
-    font-weight: 400;
-    padding: 12px 16px;
-    border: 1px solid $modalinput-border-color;
-    border-radius: 4px;
-    outline: none;
-    &:focus {
-    border: 1px solid $accent-color;
-    }
-    &::placeholder {
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: $textarea-text-color;
-    }
-}
+// .modalform-icon {
+//     position: absolute;
+//     top: 50%;
+//     left: 12px;
+//     transform: translateY(-50%);
+//     fill: $primary-text-color;
+//     width: 18px;
+//     height: 18px;
+// }
 
-.checkbox-field {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-  
-.label-rules {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    a,
-    a:visited {
-    color: $accent-color;
-    text-decoration: underline;
-    }
-}
-
-.checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-.checkbox-icon {
-    width: 16px;
-    height: 15px;
-    border: 2px solid $primary-text-color;
-    border-radius: 2px;
-    margin-right: 7px;
-    background-repeat: no-repeat;
-}
-
-.checkbox:checked + .checkbox-icon {
-    background-color: $accent-color;
-    border: 2px solid $accent-color;
-    background-image: url("../images/icons/chekbox.svg");
-    background-origin: border-box;
-}
-
-.button-submit {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 50px;
-    padding: 10px 55px;
-    background-color: $accent-color;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    font-size: 16px;
-    line-height: 1.87;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: $primary-white-color;
-    transition: background-color 250ms $timing-func;
-    &:hover {
-    color: $primary-white-color;
-    background-color: $modal-btnsbm-bg-color;
-    }
-}
+// .input:focus ~ .modalform-icon {
+//     fill: $accent-color;
+// }
 
 
-.button-close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background-color: $primary-white-color;
-    cursor: pointer;
-    &:hover .icon-close {
-        fill: $accent-color;
-        }
-}
+// .person-icon {
+//     width: 12px;
+//     height: 12px;
+// }
 
-.icon-close {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 18px;
-    height: 18px;
-    fill: #000000;
-    transition: fill 250ms $timing-func;
-}
+// .phone-icon {
+//     width: 13px;
+//     height: 13px;
+// }
+
+// .email-icon {
+//     width: 15px;
+//     height: 12px;
+// }
+
+// .input:focus ~ .modalform-icon {
+//     fill: $accent-color;
+// }
+
+// .textarea {
+//     resize: none;
+//     height: 120px;
+//     font-weight: 400;
+//     padding: 12px 16px;
+//     border: 1px solid $modalinput-border-color;
+//     border-radius: 4px;
+//     outline: none;
+//     &:focus {
+//     border: 1px solid $accent-color;
+//     }
+//     &::placeholder {
+//     font-size: 12px;
+//     font-weight: 400;
+//     font-style: normal;
+//     line-height: 1.16;
+//     letter-spacing: 0.01em;
+//     color: $textarea-text-color;
+//     }
+// }
+
+// .checkbox-field {
+//     margin-bottom: 30px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .label-rules {
+//     display: flex;
+//     align-items: center;
+//     font-size: 14px;
+//     line-height: 1.71;
+//     letter-spacing: 0.03em;
+//     a,
+//     a:visited {
+//     color: $accent-color;
+//     text-decoration: underline;
+//     }
+// }
+
+// .checkbox {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+//     border: 0;
+//     padding: 0;
+//     clip: rect(0 0 0 0);
+//     overflow: hidden;
+// }
+
+// .checkbox-icon {
+//     width: 16px;
+//     height: 15px;
+//     border: 2px solid $primary-text-color;
+//     border-radius: 2px;
+//     margin-right: 7px;
+//     background-repeat: no-repeat;
+// }
+
+// .checkbox:checked + .checkbox-icon {
+//     background-color: $accent-color;
+//     border: 2px solid $accent-color;
+//     background-image: url("../images/icons/chekbox.svg");
+//     background-origin: border-box;
+// }
+
+// .button-submit {
+//     display: block;
+//     margin: 0 auto;
+//     width: 200px;
+//     height: 50px;
+//     padding: 10px 55px;
+//     background-color: $accent-color;
+//     border: none;
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     font-size: 16px;
+//     line-height: 1.87;
+//     font-weight: 700;
+//     letter-spacing: 0.06em;
+//     color: $primary-white-color;
+//     transition: background-color 250ms $timing-func;
+//     &:hover {
+//     color: $primary-white-color;
+//     background-color: $modal-btnsbm-bg-color;
+//     }
+// }
+
+
+// .button-close {
+//     position: absolute;
+//     top: 8px;
+//     right: 8px;
+//     width: 30px;
+//     height: 30px;
+//     border: 1px solid rgba(0, 0, 0, 0.1);
+//     border-radius: 50%;
+//     background-color: $primary-white-color;
+//     cursor: pointer;
+//     &:hover .icon-close {
+//         fill: $accent-color;
+//         }
+// }
+
+// .icon-close {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 18px;
+//     height: 18px;
+//     fill: #000000;
+//     transition: fill 250ms $timing-func;
+// }

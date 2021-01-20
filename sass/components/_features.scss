@@ -1,30 +1,56 @@
-.features-list {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    display: flex;
-    .item {
-      width: 270px;
-    }
-    .item + .item {
-      margin-left: 30px;
-    }
-    .discription {
-        color: $secondary-text-color;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.71;
-    }
+.features {
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
   }
+}
 
 .iconblock {
+  display: flex;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: $bg-color;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-list {
+  @media screen and (min-width: 768px) {
     display: flex;
-    margin-bottom: 30px;
-    height: 120px;
-    background-color: $bg-color;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+// .features-list {
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14;
+// }
+
+.features-item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100%-90px) / 4);
+    &:not(:nth-child(4n)) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .features-icon {
@@ -32,12 +58,30 @@
     height: 70px;
 }
 
-
-
 .features-title {
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 14px;
     text-transform: uppercase;
+    text-align: center;
 }
 
+.section-title {
+&.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+}
+
+.discription {
+  color: $secondary-text-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}

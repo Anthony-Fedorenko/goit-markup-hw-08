@@ -1,3 +1,18 @@
+.our-job {
+
+  display: flex;
+  margin-top: 0px;
+  padding-top: 0px;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+    .job-list {
+      display: flex;
+}
+
+}
+
 .image-overlay {
     position: absolute;
     bottom: 0;
@@ -10,15 +25,6 @@
     text-align: center;
     text-transform: uppercase;
     color: $primary-white-color;
-}
-
-
-.our-job {
-    margin-top: 0px;
-    padding-top: 0px;
-    .job-list {
-        display: flex;
-    }
 }
 
 .job-item {
@@ -39,15 +45,6 @@
     margin-bottom: 50px;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
+
 
 
