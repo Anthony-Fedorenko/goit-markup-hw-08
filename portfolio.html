@@ -5,48 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <nav class="nav">
-                <p class="main-logo"><span class="accent">Web</span><span class="header-logo">studio</span></p>
-                <ul class="site-nav list">
-                    <li class="item"><a href="./index.html" class="link">Студия</a></li>
-                    <li class="item"><a href="" class="link current">Портфолио</a></li>
-                    <li class="item"><a href="" class="link">Контакты</a></li>
-                </ul>
-            </nav>
-            <address class="adr-nav list">
-                <ul class="adr-nav">
-                    <li class="item">
-                        <a href="mailto:info@devstudio.com" class="link link-envelope">
-                            <svg class="icon-envelope">
-                                <use href="./images/icons/sprite.svg#icon-envelope">
-                                </use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="tel:+380961111111" class="link link-smartphone">
-                            <svg class="icon-smartphone">
-                                <use href="./images/icons/sprite.svg#icon-smartphone">
-                                </use>
-                            </svg>+38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-            </address>
+                <div class="logo">
+                <a href="./index.html" class="logo-link"><span class="accent">Web</span>Studio</a>
+                </div>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use href="./images/icons/sprite.svg#icon-menu" class="button-menu-icon icon icon--menu"></use>
+                        <use href="./images/icons/sprite.svg#icon-close" class="button-menu-icon icon icon--close"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <div class="nav-container">
+                        <nav class="nav-list">
+                            <ul class="site-nav-list">
+                                <li class="site-nav-item"><a href="" class="site-nav-link site-nav-link--current">Студия</a></li>
+                                <li class="site-nav-item"><a href="./portfolio.html" class="site-nav-link">Портфолио</a></li>
+                                <li class="site-nav-item"><a href="" class="site-nav-link">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <address class="adr-list">
+                        <ul class="adr-nav-list">
+                            <li class="address-nav-item">
+                                <a href="mailto:info@devstudio.com" class="address-nav-link link-envelope">
+                                    <svg class="nav-icon icon-envelope">
+                                        <use href="./images/icons/sprite.svg#icon-envelope">
+                                        </use>
+                                    </svg>
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                            <li class="address-nav-item">
+                                <a href="tel:+380961111111" class="address-nav-link link-smartphone">
+                                    <svg class="nav-icon icon-smartphone">
+                                        <use href="./images/icons/sprite.svg#icon-smartphone">
+                                        </use>
+                                    </svg>+38 096 111 11 11
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
         </div>
     </header>
     <main class="portfolio-page">
         <section class="portfolio">
             <div class="container">
-                <h1 class="visually-hidden">Наши работы</h1>
+                <h1 class="section-title visually-hidden">Наши работы</h1>
                 <ul class="filter-list">
-                    <li class="filter-item"><button type="button" class="filter-button">Все</button></li>
+                    <li class="filter-item"><button type="button" class="filter-button filter-button--curent">Все</button></li>
                     <li class="filter-item"><button type="button" class="filter-button">Веб-сайты</button></li>
                     <li class="filter-item"><button type="button" class="filter-button">Дизайн</button></li>
                     <li class="filter-item"><button type="button" class="filter-button">Маркетинг</button></li>
@@ -174,7 +187,6 @@
                                         <source srcset="./images/mobile/portfolio/boxes.jpg 1x, ./images/mobile/portfolio/boxes@2x.jpg 2x" media="(min-width:320px)">
                                         <img src="./images/desktop/portfolio/boxes.jpg" alt="Проект Boxes" aria-label="Проект Boxes">
                                     </picture>
-                                    <img src="./images/Boxes.jpg" alt="Проект Boxes" width="370" height="294">
                                     <div class="card-info">
                                         <p class="info-text">
                                           Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и
@@ -193,7 +205,15 @@
                         <a href="#" class="projects">
                             <div class="projects-container">
                                 <div class="imageblock">
-                                    <img src="./images/Inspiration.jpg" alt="Inspiration has no Borders" width="370" height="294">
+                                    <picture class="card-imageblock">
+                                        <source srcset="./images/desktop/portfolio/inspiration.webp 1x, ./images/desktop/portfolio/inspiration@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                                        <source srcset="./images/desktop/portfolio/inspiration.jpg 1x, ./images/desktop/portfolio/inspiration@2x.jpg 2x" media="(min-width:1200px)">
+                                        <source srcset="./images/tablet/portfolio/inspiration.webp 1x, ./images/tablet/portfolio/inspiration@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+                                        <source srcset="./images/tablet/portfolio/inspiration.jpg 1x, ./images/tablet/portfolio/inspiration@2x.jpg 2x" media="(min-width:768px)">
+                                        <source srcset="./images/mobile/portfolio/inspiration.webp 1x, ./images/mobile/portfolio/inspiration@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+                                        <source srcset="./images/mobile/portfolio/inspiration.jpg 1x, ./images/mobile/portfolio/inspiration@2x.jpg 2x" media="(min-width:320px)">
+                                        <img src="./images/desktop/portfolio/inspiration.jpg" alt="Inspiration has no Borders" aria-label="Inspiration has no Borders">
+                                    </picture>
                                     <div class="card-info">
                                         <p class="info-text">
                                           Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и
@@ -212,7 +232,15 @@
                         <a href="#" class="projects">
                             <div class="projects-container">
                                 <div class="imageblock">
-                                    <img src="./images/LE.jpg" alt="Издание Limited Edition" width="370" height="294">
+                                    <picture class="card-imageblock">
+                                        <source srcset="./images/desktop/portfolio/le.webp 1x, ./images/desktop/portfolio/le@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                                        <source srcset="./images/desktop/portfolio/le.jpg 1x, ./images/desktop/portfolio/le@2x.jpg 2x" media="(min-width:1200px)">
+                                        <source srcset="./images/tablet/portfolio/le.webp 1x, ./images/tablet/portfolio/le@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+                                        <source srcset="./images/tablet/portfolio/le.jpg 1x, ./images/tablet/portfolio/le@2x.jpg 2x" media="(min-width:768px)">
+                                        <source srcset="./images/mobile/portfolio/le.webp 1x, ./images/mobile/portfolio/le@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+                                        <source srcset="./images/mobile/portfolio/le.jpg 1x, ./images/mobile/portfolio/le@2x.jpg 2x" media="(min-width:320px)">
+                                        <img src="./images/desktop/portfolio/le.jpg" alt="Издание Limited Edition" aria-label="Издание Limited Edition">
+                                    </picture>
                                     <div class="card-info">
                                         <p class="info-text">
                                           Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и
@@ -231,7 +259,15 @@
                         <a href="#" class="projects">
                             <div class="projects-container">
                                 <div class="imageblock">
-                                    <img src="./images/Lab.jpg" alt="Проект LAB" width="370" height="294">
+                                    <picture class="card-imageblock">
+                                        <source srcset="./images/desktop/portfolio/lab.webp 1x, ./images/desktop/portfolio/lab@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                                        <source srcset="./images/desktop/portfolio/lab.jpg 1x, ./images/desktop/portfolio/lab@2x.jpg 2x" media="(min-width:1200px)">
+                                        <source srcset="./images/tablet/portfolio/lab.webp 1x, ./images/tablet/portfolio/lab@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+                                        <source srcset="./images/tablet/portfolio/lab.jpg 1x, ./images/tablet/portfolio/lab@2x.jpg 2x" media="(min-width:768px)">
+                                        <source srcset="./images/mobile/portfolio/lab.webp 1x, ./images/mobile/portfolio/lab@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+                                        <source srcset="./images/mobile/portfolio/lab.jpg 1x, ./images/mobile/portfolio/lab@2x.jpg 2x" media="(min-width:320px)">
+                                        <img src="./images/desktop/portfolio/lab.jpg" alt="Проект LAB" aria-label="Проект LAB">
+                                    </picture>
                                     <div class="card-info">
                                         <p class="info-text">
                                           Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и
@@ -250,7 +286,15 @@
                         <a href="#" class="projects">
                             <div class="projects-container">
                                 <div class="imageblock">
-                                    <img src="./images/Growing.jpg" alt="Growing Business" width="370" height="294">
+                                    <picture class="card-imageblock">
+                                        <source srcset="./images/desktop/portfolio/growing.webp 1x, ./images/desktop/portfolio/growing@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                                        <source srcset="./images/desktop/portfolio/growing.jpg 1x, ./images/desktop/portfolio/growing@2x.jpg 2x" media="(min-width:1200px)">
+                                        <source srcset="./images/tablet/portfolio/growing.webp 1x, ./images/tablet/portfolio/growing@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+                                        <source srcset="./images/tablet/portfolio/growing.jpg 1x, ./images/tablet/portfolio/growing@2x.jpg 2x" media="(min-width:768px)">
+                                        <source srcset="./images/mobile/portfolio/growing.webp 1x, ./images/mobile/portfolio/growing@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+                                        <source srcset="./images/mobile/portfolio/growing.jpg 1x, ./images/mobile/portfolio/growing@2x.jpg 2x" media="(min-width:320px)">
+                                        <img src="./images/desktop/portfolio/growing.jpg" alt="Growing Business" aria-label="Growing Business">
+                                    </picture>
                                     <div class="card-info">
                                         <p class="info-text">
                                           Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и
