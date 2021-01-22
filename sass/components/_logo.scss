@@ -4,6 +4,10 @@
         margin-bottom: 20px;
     }
 
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+
     &-link {
         color: $primary-text-color;
         font-family: Raleway, sans-serif;
