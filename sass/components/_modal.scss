@@ -102,12 +102,6 @@
     }
 }
 
-// .input {
-//     &:focus {
-//     border: 1px solid $accent-color;
-//     }
-// }
-
 .modalform-icon {
     position: absolute;
     top: 50%;
@@ -121,7 +115,6 @@
 .input:focus ~ .modalform-icon {
     fill: $accent-color;
 }
-
 
 .person-icon {
     width: 12px;
